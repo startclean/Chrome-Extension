@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Start Clean</title>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="apps.js" ></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div id="apps"></div>
+    <div class="favorites">
+      <div class="favorites-list">
+        <ul>
+          <li class="title">
+            <p>productivity</p>
+          </li>
+	  <li><a href="https://drive.google.com">drive</a></li>
+	  <li><a href="https://docs.google.com">docs</a></li>
+          <li><a href="https://inbox.google.com">gmail</a></li>
+          <li><a href="https://calendar.google.com">calendar</a></li>
+	  <li><a href="https://todoist.com">todoist</a></li>
+        </ul>
+      </div>
+
+      <div class="favorites-list">
+        <ul>
+          <li class="title">
+            <p>media</p>
+          </li>
+          <li><a href="https://lobste.rs">lobsters</a></li>
+          <li><a href="https://news.ycombinator.com">hacker news</a></li>
+          <li><a href="https://theintercept.com">theintercept</a></li>
+          <li><a href="https://xkcd.com">xkcd</a></li>
+          <li><a href="http://smbc-comics.com">smbc</a></li>
+        </ul>
+      </div>
+
+      <div class="favorites-list">
+        <ul>
+          <li class="title">
+            <p>nix</p>
+          </li>
+          <li><a href="https://nixers.net">nixers</a></li>
+          <li><a href="https://git.mpcsh.xyz">git</a></li>
+          <li><a href="https://github.com">github</a></li>
+          <li><a href="https://reddit.com/r/unixporn">unixporn</a></li>
+          <li><a href="https://localhost:8384">syncthing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="search-main" style="min-height: 81px; transition: opacity 500ms;">
+    <div id="google-search-main"><gcse:search linktarget="_parent"></gcse:search></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="search.js" ></script>
+</body>
+
+</html>
+
