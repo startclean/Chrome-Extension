@@ -1,5 +1,8 @@
 var mainlist;
 
+//chrome.tabs.create({ url: chrome.extension.getURL("newtab.html") });
+//window.close();
+
 document.addEventListener("DOMContentLoaded", function() {
 	chrome.storage.sync.get(
 {"lists": [[["drive","http://drive.google.com/"],["gmail","http://mail.google.com/"],["github","https://github.com/"],["todoist","http://todoist.com/"],["syncthing","https://localhost:8384/"]], 					[["news","http://reddit.com/r/news"], ["unixporn","http://reddit.com/r/unixporn"],["funny","http://reddit.com/r/funny"], ["linux","http://reddit.com/r/linux"], ["all","http://reddit.com/r/all"]]],
@@ -50,7 +53,7 @@ var userListsCallback = function(lists) {
 		}
 		
 		var sortable = Sortable.create(ul, {
-			group: mainlist[i],
+			group: "userlists",
 			onUpdate: function (evt) {
 				save();
 			}
