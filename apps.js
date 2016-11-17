@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         name.textContent = extInf.name;
 
         app.className = "app";
+	app.setAttribute("data-id", i+1);
         app.appendChild(img);
         app.appendChild(name);
         apps.appendChild(app);

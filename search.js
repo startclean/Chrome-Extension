@@ -18,10 +18,9 @@
         e = e + (',"style":"' + g + '"');
     opts_.language && (e += ',"language":"' + opts_.language + '"');
     e += "}";
-    b.src = c + d('{"modules":[' + e + "]}") + "";
-    b.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(b);
-    console.log("Google has crummy cse scripts that use https and http interchangebly. Thats what most of the console logs are when you type into the bar (it's trying to autocomplete...) I'm looking to fix this.");
+    //b.src = c + d('{"modules":[' + e + "]}") + "";
+    //b.type = "text/javascript";
+    //document.getElementsByTagName("head")[0].appendChild(b);
 })({
     "cx": "007893109997094852463:-p_khyo1kgw",
     "language": "en",
