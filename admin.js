@@ -1,7 +1,11 @@
-var mainlist = ["roberts"];
+var mainlist;
 
 document.addEventListener("DOMContentLoaded", function() {
-	chrome.storage.sync.get("lists", userListsCallback);
+	chrome.storage.sync.get(
+{"lists": [[["drive","http://drive.google.com/"],["gmail","http://mail.google.com/"],["github","https://github.com/"],["todoist","http://todoist.com/"],["syncthing","https://localhost:8384/"]], 					[["news","http://reddit.com/r/news"], ["unixporn","http://reddit.com/r/unixporn"],["funny","http://reddit.com/r/funny"], ["linux","http://reddit.com/r/linux"], ["all","http://reddit.com/r/all"]]],
+"l1name": "productivity",
+"l2name": "subreddits"},
+	userListsCallback);
 });
 
 function listToArray(list) {
@@ -14,6 +18,7 @@ function listToArray(list) {
 }
 
 var userListsCallback = function(lists) {
+	mainlist = [lists["l1name"],lists["l2name"]]
 	for(var i=0;i<lists["lists"].length;i++) {
 		var div = document.createElement("div");
 		div.setAttribute("class", "favorites-list users-list");
@@ -53,6 +58,7 @@ var userListsCallback = function(lists) {
 	}
 	
 	menu();
+	
 };
 
 function listen(li) {

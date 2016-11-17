@@ -3,33 +3,39 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   var getAllCallback = function(list) {
-    var apps = document.getElementById("apps");
-    for(var i in list) {
-      // we don't want to do anything with extensions
-      var extInf = list[i];
-      if(extInf.isApp && extInf.enabled) {
-        var app = document.createElement("div");
+	chrome.storage.sync.get({
+	"showApps": true
+	}, function(items) {
+		if (items["showApps"] == true) {
+			var apps = document.getElementById("apps");
+			for(var i in list) {
+			  // we don't want to do anything with extensions
+			  var extInf = list[i];
+			  if(extInf.isApp && extInf.enabled) {
+				var app = document.createElement("div");
 
-        var img = new Image();
-        img.className = "image";
-        img.src = find128Image(extInf.icons);
-        img.addEventListener("click", (function(ext) {
-          return function() {
-            chrome.management.launchApp(ext.id);
-          };
-        })(extInf));
+				var img = new Image();
+				img.className = "image";
+				img.src = find128Image(extInf.icons);
+				img.addEventListener("click", (function(ext) {
+				  return function() {
+				    chrome.management.launchApp(ext.id);
+				  };
+				})(extInf));
 
-        var name = document.createElement("div");
-        name.className = "name";
-        name.textContent = extInf.name;
+				var name = document.createElement("div");
+				name.className = "name";
+				name.textContent = extInf.name;
 
-        app.className = "app";
-	app.setAttribute("data-id", i+1);
-        app.appendChild(img);
-        app.appendChild(name);
-        apps.appendChild(app);
-      }
-    }
+				app.className = "app";
+			app.setAttribute("data-id", i+1);
+				app.appendChild(img);
+				app.appendChild(name);
+				apps.appendChild(app);
+			  }
+			}
+		}
+	});
   };
 
   var find128Image = function(icons) {

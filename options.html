@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Test Extension Options</title>
+  <title>Start Clean New Tab Page</title>
   <style>
     body: { padding: 10px; }
   </style>
 </head>
 
 <body>
-  Favorite color:
-  <select id="color">
-   <option value="red">red</option>
-   <option value="green">green</option>
-   <option value="blue">blue</option>
-   <option value="yellow">yellow</option>
-  </select>
+	<label>
+	<input type="text" id="l1"> Label for 1st user controlled list
+	</label>
+	<br />
+	<label>
+	<input type="text" id="l2"> Label for 2nd user controlled list
+	</label>
+	
+	<br /><br />
+	<label>
+	<input type="checkbox" id="apps">
+	Show apps?
+	</label>
+	<label>
+	<input type="checkbox" id="top">
+	Show top visited?
+	</label>
 
-  <label>
-    <input type="checkbox" id="like">
-    I like colors.
-  </label>
+	<br /><br />
 
-  <div id="status"></div>
-  <button id="save">Save</button>
+	<div id="status"></div>
+	<button id="save">Save</button>
 
-  <script src="options.js"></script>
+	<p>Start Clean New Tab Page by <a href="http://www.devpy.me">Robert Washbourne</a></p>
+	<a href="https://github.com/startclean/Chrome-Extension">Fork the GitHub Repo</a><br />
+	<a href="https://github.com/startclean/startclean.github.io">Standalone website</a>
+
+	<script src="options.js"></script>
 </body>
 </html>
