@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta name=viewport content="width=device-width, initial-scale=1">
 
+  <script type="text/javascript" src="search.js" ></script>
   <script type="text/javascript" src="apps.js" ></script>
   <script type="text/javascript" src="topsites.js" ></script>
   <script type="text/javascript" src="admin.js" ></script>
-  <script type="text/javascript" src="search.js" ></script>
   <script src="https://cdn.jsdelivr.net/sortable/latest/Sortable.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
@@ -30,13 +30,11 @@
     </div>
     
 
-    <div class="search-main" style="min-height: 81px; transition: opacity 500ms;">
-    <div id="google-search-main"><gcse:search linktarget="_parent"></gcse:search></div>
-    </div>
-  </div>
-
-  <script type="text/javascript" src="google.js" ></script>
-  <script type="text/javascript" src="default+en.I.js" ></script>
+	<div class="search">
+		<form id="search-form" method="get" action="https://google.com/search?">
+			<input id="search-box" name="q" type="text" placeholder="search" autofocus/>
+		</form>
+	</div>
 </body>
 
 </html>

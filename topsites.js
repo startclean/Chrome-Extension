@@ -12,12 +12,31 @@ function extractDomain(url, y) {
     domain = domain.split(':')[0];
 
     //find & remove tld
+	//if (y == 1) {
+    //	domain = domain.split('.')[0];
+	//}
+	
 	if (y == 1) {
-    	domain = domain.split('.')[0];
+		d = splitHostname(domain);
+		if (d.subdomain != "www" && d.subdomain != "") {
+			return d.subdomain;
+		} else {
+			return d.domain;
+		}
+	} else {
+		return domain;	
 	}
-
-    return domain;
 } //from lewdev on stackoverflow
+
+function splitHostname(h) {
+    var result = {};
+    var regexParse = new RegExp('([a-z\-0-9]{2,63})\.([a-z\.]{2,5})$');
+    var urlParts = regexParse.exec(h);
+    result.domain = urlParts[1];
+    result.type = urlParts[2];
+    result.subdomain = h.replace(result.domain + '.' + result.type, '').slice(0, -1);;
+    return result;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
 	chrome.storage.sync.get({
