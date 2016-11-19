@@ -2,6 +2,8 @@
 
 Version 0.2.2 offers major bug fixes and an option to choose search box location, plus choose search engine, and urls in the search box resolve.
 
+[Donate to dev](https://www.paypal.me/rawas)
+
 ![](http://i.imgur.com/PnM9k1S.png)
 
 ![](http://i.imgur.com/bHBfXLk.png)
