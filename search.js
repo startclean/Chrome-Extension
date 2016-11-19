@@ -60,7 +60,7 @@ var searchCallback = function(list) {
 
 	var searchplace = list["searchplace"];
 	var formstring = "<form id=\"search-form\" method=\"get\" action=\"https://google.com/search?\">\
-			<input id=\"search-box\" name=\"q\" type=\"text\" placeholder=\"search\" autofocus autocomplete='off'/>\
+			<input id=\"search-box\" name=\"q\" type=\"text\" placeholder=\"search\" autofocus autocomplete='on'/>\
 		</form>";
 
 	if (searchplace == "top") {

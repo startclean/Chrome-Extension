@@ -4,9 +4,14 @@
 }
 
 #callback {
-    height: 100px;
+    bottom: 0;
+    position: absolute;
+    height: 115px;
     width: 31.1rem;
-    margin-top: 2em;
+}
+
+#search3 {
+	margin-top: -1.5rem;
 }
 
 #wikires > a {
@@ -168,7 +173,7 @@ body {
 
 .favorites-list {
   width: 10rem;
-  margin: 2rem;
+  margin: 0.5rem 2em 2em 2em;
 }
 
 ul {
