@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	chrome.storage.sync.get({
 	"showApps": true
 	}, function(items) {
-		console.log(list);
 		if (items["showApps"] == true) {
 			var apps = document.getElementById("apps");
 
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 			list = list.filter(isEnabledApp);
 			for(var i=0;i<Math.min(list.length,13);i++) {
-				console.log(i);
 			  // we don't want to do anything with extensions
 			  var extInf = list[i];
 			  if(extInf.isApp && extInf.enabled) {

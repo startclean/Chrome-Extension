@@ -92,7 +92,8 @@ function listen(li) {
 				if (inp.getElementsByClassName("name")[0].value != "" || inp.getElementsByClassName("url")[0].value != "") {
 					var li = document.createElement("li");
 					li.setAttribute("id",r[1]+"-"+listToArray(ul).length.toString());
-					var siteurl = "http://"+extractDomain(inp.getElementsByClassName("url")[0].value,0);
+					//var splitted = splitHostname(inp.getElementsByClassName("url")[0].value); fix later
+					var siteurl = addhttp(inp.getElementsByClassName("url")[0].value);
 					var name = inp.getElementsByClassName("name")[0].value;
 
 					li.insertAdjacentHTML("beforeend", "<a href="+siteurl+">"+name+"</a>");

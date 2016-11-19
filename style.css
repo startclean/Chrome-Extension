@@ -2,6 +2,14 @@
 	display: none;
 }
 
+#search1.active {
+    margin-bottom: 2em;
+}
+
+#search2.active {
+    margin-top: 2em;
+}
+
 .name {
     white-space: nowrap;
     overflow: hidden;
@@ -103,9 +111,6 @@ li.sortable-chosen.sortable-ghost > a {
 html, body {
   font-family: Roboto !important;
   font-size: 16px !important;
-  .search-main > div {
-    width: 30rem;
-  }
   width: 100vw;
   height: 100vh;
 }
@@ -116,10 +121,6 @@ body {
   margin: 0;
   background-color: #222222;
   color: #b5b5a4;
-}
-
-.search-main > div {
-  width: 672px;
 }
 
 .container {
@@ -166,7 +167,7 @@ ul > li > a:hover {
   background-color: #b5b5a4;
 }
 
-.search {
+.search.active {
 	width: 30rem;
 	padding: 0.5rem;
 	border: 1px solid #b5b5a4;

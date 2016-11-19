@@ -28,6 +28,13 @@ function extractDomain(url, y) {
 	}
 } //from lewdev on stackoverflow
 
+function addhttp(url) {
+   if (!/^(f|ht)tps?:\/\//i.test(url)) {
+      url = "http://" + url;
+   }
+   return url;
+}
+
 function splitHostname(h) {
     var result = {};
     var regexParse = new RegExp('([a-z\-0-9]{2,63})\.([a-z\.]{2,5})$');

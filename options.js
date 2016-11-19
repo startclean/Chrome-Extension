@@ -7,13 +7,15 @@ function save_options() {
 	var showTop = document.getElementById('top').checked;
 	
 	var searche = document.getElementById('search').value;
+	var searchplace = document.getElementById('searchplace').value;
 
 	chrome.storage.sync.set({
 	"search": searche,
 	"l1name": l1name,
 	"l2name": l2name,
 	"showApps": showApps, 
-	"showTop": showTop
+	"showTop": showTop,
+	"searchplace": searchplace
 	}, function() {
 	// Update status to let user know options were saved.
 	var status = document.getElementById('status');
@@ -33,13 +35,15 @@ function restore_options() {
     "l1name": "productivity",
 	"l2name": "subreddits",
 	"showApps": true, 
-	"showTop": true
+	"showTop": true,
+	"searchplace": "bottom"
   }, function(items) {
 	document.getElementById('search').value = items["search"];
 	document.getElementById('l1').value = items["l1name"];
 	document.getElementById('l2').value = items["l2name"];
     document.getElementById('apps').checked = items["showApps"];
     document.getElementById('top').checked = items["showTop"];
+	document.getElementById('searchplace').value = items["searchplace"];
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
