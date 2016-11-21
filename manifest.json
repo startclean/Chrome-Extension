@@ -1,7 +1,7 @@
 {
     "name": "Start Clean New Tab Page",
     "description": "Open a new tab with a clean & fast ui.",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "manifest_version": 2,
     "permissions" : ["management", "storage", "topSites"],
     "chrome_url_overrides" : {
