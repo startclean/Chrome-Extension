@@ -1,6 +1,10 @@
 # Start Clean New Tab Page
 
-Version 0.2.2 offers major bug fixes and an option to choose search box location, plus choose search engine, and urls in the search box resolve.
+ * Version 0.2.7 bundles code and fonts locally for offline usage.
+ * Version 0.2.6 offers a background color changer in the options. Thank you to koopa1338 on github! 
+ * Version 0.2.5 includes bug fixes. 
+ * Version 0.2.4 changes the way search works with autocomplete powered by duckduckgo and wikipedia. 
+ * Version 0.2.2 offers an option to choose search box location and search engine & urls in the search box resolve. 
 
 [Donate to dev](https://www.paypal.me/rawas)
 
