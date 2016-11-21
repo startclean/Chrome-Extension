@@ -7,7 +7,7 @@
     "chrome_url_overrides" : {
         "newtab": "start.html"
     },
-    "content_security_policy": "script-src 'self' https://en.wikipedia.org https://api.duckduckgo.com https://cdn.jsdelivr.net https://code.jquery.com https://clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com 'unsafe-eval'; object-src 'self'",
+    "content_security_policy": "script-src 'self' https://en.wikipedia.org https://api.duckduckgo.com; object-src 'self'",
     "icons": { "48": "icon.png" },
     "options_ui": {
     "page": "options.html",
