@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				img.addEventListener("click", (function(ext) {
 				  return function() {
 				    chrome.management.launchApp(ext.id);
+					window.close();
 				  };
 				})(extInf));
 
