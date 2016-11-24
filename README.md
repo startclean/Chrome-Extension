@@ -12,6 +12,8 @@
 
 ![](http://i.imgur.com/bHBfXLk.png)
 
+![](http://i.imgur.com/mIm30O8.png)
+
 Start Clean offers a minimal ui that replaces Google Chrome's default page.
 It includes the top sites you visit, and shows your apps (both turned on in the settings). You can add your own custom links.
 
