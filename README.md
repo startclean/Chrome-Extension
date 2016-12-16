@@ -1,3 +1,9 @@
+NOTE: This is the original README from Start Clean New Tab Page Lite.
+      All I did was add in the display of website favicons and all new tabs forced
+      open in a new tab upon left click.
+      
+Original git repo:  https://github.com/startclean/Chrome-Extension
+
 # Start Clean New Tab Page Lite
 
 Start Clean Light is a version of the extension with no search.
