@@ -70,12 +70,12 @@ var userListsCallback = function(lists) {
 			li.setAttribute("id", mainlist[i]+"-"+j);
 			var siteurl = list[j][1];
 			var name = list[j][0];
-			// solohack
+			// ronmurphy change start
 			var img = document.createElement("img");
 						img.className = "icon";
 						img.src = "http://www.google.com/s2/favicons?domain="+siteurl+"";
 			li.insertAdjacentHTML("beforeend", "<a href="+siteurl+"> <img src="+img.src+" alt="+extractDomain(siteurl,1)+"/> "+name+"</a>");
-			// solo hack end
+			// ronmurphy end
 			//li.insertAdjacentHTML("beforeend", "<a href="+siteurl+">"+name+"</a>");
 			li.insertAdjacentHTML("beforeend", "<span id='delete-"+j+"-"+mainlist[i]+"'>-</span>");
 			ul.appendChild(li);
