@@ -1,5 +1,6 @@
-# Start Clean New Tab Page
+# Start Clean New Tab Page Lite
 
+Start Clean Light is a version of the extension with no search.
 Start Clean offers a minimal ui that replaces Google Chrome's default page. It includes the top sites you visit, and can show your apps. You can add your own custom links and drag to reorder.
 
  * Version 0.2.7 bundles code and fonts locally for offline usage.

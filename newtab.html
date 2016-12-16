@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+<base target="_blank">
 <head>
   <title>New Tab</title>
   <meta charset="utf-8">
   <meta name=viewport content="width=device-width, initial-scale=1">
 
-  <script type="text/javascript" src="search.js" ></script>
   <script type="text/javascript" src="apps.js" ></script>
   <script type="text/javascript" src="topsites.js" ></script>
   <script type="text/javascript" src="admin.js" ></script>
@@ -17,12 +17,9 @@
   <link rel="stylesheet" href="roboto.css">
 </head>
 
-<body>
+<body style="background: #222222;">
   <div class="container">
-	<div class="search" id="search1"></div>
-    <div id="apps"></div>
-	<div class="search" id="search2"></div>
-
+    <div id="apps" style="height:147px;"></div>
     <div class="favorites" id="links" style="min-height: 283px;">
       <div class="favorites-list" id="topsites-list">
         <ul id="topsites">
@@ -32,9 +29,5 @@
         </ul>
       </div>
     </div>
-
-	<div class="search" id="search3"></div>
-	<div id="callback"><div id="wikires"></div><div id="duckduckres"></div></div>
 </body>
-
 </html>

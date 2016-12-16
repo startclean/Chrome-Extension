@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				 return x.isApp;
 			}
 			list = list.filter(isEnabledApp);
-			for(var i=0;i<Math.min(list.length,6);i++) {
+			for(var i=0;i<list.length;i++) {
 			  // we don't want to do anything with extensions
 			  var extInf = list[i];
 			  if(extInf.isApp && extInf.enabled) {

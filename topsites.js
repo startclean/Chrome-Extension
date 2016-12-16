@@ -15,7 +15,7 @@ function extractDomain(url, y) {
 	//if (y == 1) {
     //	domain = domain.split('.')[0];
 	//}
-	
+
 	if (y == 1) {
 		d = splitHostname(domain);
 		if (d.subdomain != "www" && d.subdomain != "") {
@@ -24,7 +24,7 @@ function extractDomain(url, y) {
 			return d.domain;
 		}
 	} else {
-		return domain;	
+		return domain;
 	}
 } //from lewdev on stackoverflow
 
@@ -62,12 +62,14 @@ function listTopSites() { //get the top 5 sites from chrome
 	for(var i=0;i<5;i++) {
 	  var li = document.createElement("li");
 	  var siteurl = info[i].url;
-	  li.insertAdjacentHTML("beforeend", "<a href="+siteurl+">"+extractDomain(siteurl,1)+"</a>");
-	  //li.appendChild("extractDomain(info[i].url)");
-	  ul.appendChild(li);
+    var img = document.createElement("img");
+          img.className = "icon";
+          img.src = "http://www.google.com/s2/favicons?domain="+siteurl+"";
+	  li.insertAdjacentHTML("beforeend", "<a href="+siteurl+"> <img src="+img.src+" alt="+extractDomain(siteurl,1)+"/> "+extractDomain(siteurl,1)+"</a>");
+
+
+    //li.appendChild("extractDomain(info[i].url)");
+    ul.appendChild(li);
 	}
 	});
 }
-
-
-

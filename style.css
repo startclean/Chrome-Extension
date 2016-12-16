@@ -113,11 +113,27 @@
 }
 
 div#apps {
+    overflow-x: scroll;
     display: flex;
-    width: 800px;
-    flex-flow: row wrap;
+    width: 907px;
     align-content: center;
     justify-content: center;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.2);
 }
 
 li.sortable-chosen.sortable-ghost > a {

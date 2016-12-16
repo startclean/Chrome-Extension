@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-	chrome.storage.sync.get({"l3name": "#222222"}, bgCallback);
+	chrome.storage.sync.get({"bgvalue": "#222222"}, bgCallback);
 });
 var bgCallback = function(list) {
-var color = list["l3name"]
+var color = list["bgvalue"];
+console.log(color);
 document.body.style.background = color;
 };

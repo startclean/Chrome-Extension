@@ -2,22 +2,20 @@
 function save_options() {
 	var l1name = document.getElementById('l1').value;
 	var l2name = document.getElementById('l2').value;
-	var l3name = document.getElementById('l3').value;
-
+    var l3name = document.getElementById('l3').value;
+    
+	var bgvalue = document.getElementById('bg').value;
+    console.log(bgvalue);
 	var showApps = document.getElementById('apps').checked;
 	var showTop = document.getElementById('top').checked;
 
-	var searche = document.getElementById('search').value;
-	var searchplace = document.getElementById('searchplace').value;
-
 	chrome.storage.sync.set({
-	"search": searche,
 	"l1name": l1name,
 	"l2name": l2name,
-	"l3name": l3name,
+    "l3name": l3name,
+	"bgvalue": bgvalue,
 	"showApps": showApps,
-	"showTop": showTop,
-	"searchplace": searchplace
+	"showTop": showTop
 	}, function() {
 	// Update status to let user know options were saved.
 	var status = document.getElementById('status');
@@ -33,23 +31,21 @@ function save_options() {
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-	"search": "google",
-  "l1name": "productivity",
+    "l1name": "productivity",
 	"l2name": "subreddits",
-	"l3name": "#222222",
+    "l3name": "distros",
+	"bgvalue": "#222222",
 	"showApps": true,
-	"showTop": true,
-	"searchplace": "bottom"
+	"showTop": true
   }, function(items) {
-	document.getElementById('search').value = items["search"];
 	document.getElementById('l1').value = items["l1name"];
 	document.getElementById('l2').value = items["l2name"];
-	document.getElementById('l3').value = items["l3name"];
+    document.getElementById('l3').value = items["l3name"];
+      
+	document.getElementById('bg').value = items["bgvalue"];
 	document.getElementById('apps').checked = items["showApps"];
-  document.getElementById('top').checked = items["showTop"];
-	document.getElementById('searchplace').value = items["searchplace"];
+    document.getElementById('top').checked = items["showTop"];
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+document.getElementById('save').addEventListener('click', save_options);

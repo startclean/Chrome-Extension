@@ -5,9 +5,32 @@ var mainlist;
 
 document.addEventListener("DOMContentLoaded", function() {
 	chrome.storage.sync.get(
-{"lists": [[["drive","http://drive.google.com/"],["gmail","http://mail.google.com/"],["github","https://github.com/"],["todoist","http://todoist.com/"],["syncthing","https://localhost:8384/"]], 					[["news","http://reddit.com/r/news"], ["unixporn","http://reddit.com/r/unixporn"],["funny","http://reddit.com/r/funny"], ["linux","http://reddit.com/r/linux"], ["all","http://reddit.com/r/all"]]],
+{"lists": [
+    [
+        ["syncthing", "https://localhost:8384/"],
+        ["todoist", "http://todoist.com/"],
+        ["github", "https://github.com/"],
+        ["gmail", "http://mail.google.com/"],
+        ["drive", "http://drive.google.com/"]
+    ],
+    [
+        ["unixporn", "http://reddit.com/r/unixporn"],
+        ["news", "http://reddit.com/r/news"],
+        ["funny", "http://reddit.com/r/funny"],
+        ["linux", "http://reddit.com/r/linux"],
+        ["all", "http://reddit.com/r/all"]
+    ],
+    [
+        ["elementary", "https://elementary.io/"],
+        ["ubuntu", "https://www.ubuntu.com/"],
+        ["fedora", "https://getfedora.org/"],
+        ["mint", "https://linuxmint.com/"],
+        ["arch", "https://www.archlinux.org/"]
+    ]
+],
 "l1name": "productivity",
-"l2name": "subreddits"},
+"l2name": "general",
+"l3name": "distros"},
 	userListsCallback);
 });
 
@@ -21,7 +44,7 @@ function listToArray(list) {
 }
 
 var userListsCallback = function(lists) {
-	mainlist = [lists["l1name"],lists["l2name"]]
+	mainlist = [lists["l1name"],lists["l2name"],lists["l3name"]]
 	for(var i=0;i<lists["lists"].length;i++) {
 		var div = document.createElement("div");
 		div.setAttribute("class", "favorites-list users-list");
@@ -30,7 +53,7 @@ var userListsCallback = function(lists) {
 		var ul = document.createElement("ul");
 		ul.setAttribute("id", mainlist[i]);
 		div.appendChild(ul);
-		
+
 		var title = document.createElement("div");
 		title.setAttribute("class", "title");
 		ul.appendChild(title);
@@ -47,11 +70,17 @@ var userListsCallback = function(lists) {
 			li.setAttribute("id", mainlist[i]+"-"+j);
 			var siteurl = list[j][1];
 			var name = list[j][0];
-			li.insertAdjacentHTML("beforeend", "<a href="+siteurl+">"+name+"</a>");
+			// solohack
+			var img = document.createElement("img");
+						img.className = "icon";
+						img.src = "http://www.google.com/s2/favicons?domain="+siteurl+"";
+			li.insertAdjacentHTML("beforeend", "<a href="+siteurl+"> <img src="+img.src+" alt="+extractDomain(siteurl,1)+"/> "+name+"</a>");
+			// solo hack end
+			//li.insertAdjacentHTML("beforeend", "<a href="+siteurl+">"+name+"</a>");
 			li.insertAdjacentHTML("beforeend", "<span id='delete-"+j+"-"+mainlist[i]+"'>-</span>");
 			ul.appendChild(li);
 		}
-		
+
 		var sortable = Sortable.create(ul, {
 			group: "userlists",
 			onUpdate: function (evt) {
@@ -59,9 +88,9 @@ var userListsCallback = function(lists) {
 			}
 		});
 	}
-	
+
 	menu();
-	
+
 };
 
 function listen(li) {
@@ -125,5 +154,3 @@ function save(l) {
 	}
 	chrome.storage.sync.set( {"lists": d} );
 }
-
-
