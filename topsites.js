@@ -62,11 +62,12 @@ function listTopSites() { //get the top 5 sites from chrome
 	for(var i=0;i<5;i++) {
 	  var li = document.createElement("li");
 	  var siteurl = info[i].url;
+// ronmurphy start
     var img = document.createElement("img");
           img.className = "icon";
           img.src = "http://www.google.com/s2/favicons?domain="+siteurl+"";
 	  li.insertAdjacentHTML("beforeend", "<a href="+siteurl+"> <img src="+img.src+" alt="+extractDomain(siteurl,1)+"/> "+extractDomain(siteurl,1)+"</a>");
-
+// ronmurphy end
 
     //li.appendChild("extractDomain(info[i].url)");
     ul.appendChild(li);
