@@ -116,8 +116,8 @@ div#apps {
     overflow-x: scroll;
     display: flex;
     width: 907px;
-    align-content: center;
-    justify-content: center;
+    align-content: flex-start;
+    justify-content: flex-start;
 }
 
 ::-webkit-scrollbar
