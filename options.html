@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Start Clean New Tab Page</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
+
+<body>
+	Search engine:
+	<select id="search">
+	<option value="google">google</option>
+	<option value="duckduckgo">duckduckgo</option>
+	<option value="yahoo">yahoo</option>
+	<option value="bing">bing</option>
+	</select>
+	<br /><br />
+	Search placement:
+	<select id="searchplace">
+	<option value="top">top</option>
+	<option value="middle">middle</option>
+	<option value="bottom">bottom</option>
+	</select>
+	<br /><br />
+	<label>
+	<input type="text" id="l1"> 1st label
+	</label>
+	<br />
+	<label>
+	<input type="text" id="l2"> 2nd label
+	</label>
+  <br />
+  <label>
+	<input type="text" id="l3"> background-color
+	</label>
+
+	<br /><br />
+	<label>
+	<input type="checkbox" id="apps">
+	Show apps?
+	</label>
+	<label>
+	<input type="checkbox" id="top">
+	Show top visited?
+	</label>
+
+	<br /><br />
+
+	<div id="status"></div>
+	<button id="save">Save</button>
+
+	<p>Start Clean New Tab Page by <a href="http://www.devpy.me">Robert Washbourne</a></p>
+	<a href="https://github.com/startclean/Chrome-Extension">Fork the GitHub Repo</a><br />
+	<a href="https://github.com/startclean/startclean.github.io">Standalone website</a>
+
+	<script src="options.js"></script>
+</body>
+</html>

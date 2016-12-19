@@ -1,0 +1,237 @@
+#search-form > input#search-box:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #222 inset !important;
+    -webkit-text-fill-color: #b5b5a4 !important;
+}
+
+#callback {
+    bottom: 0;
+    position: absolute;
+    height: 115px;
+    width: 31.1rem;
+}
+
+#search3 {
+	margin-top: -1.5rem;
+}
+
+#wikires > a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    height: 19px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+#duckduckres > a {
+    margin-bottom: 0.5em;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+#topsites-list {
+	display: none;
+}
+
+#search1.active {
+    margin-bottom: 2em;
+}
+
+#search2.active {
+    margin-top: 2em;
+}
+
+.name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.inp {
+	width: 200px;
+}
+
+.inp > input {
+	font-size: 16px !important;
+}
+
+.users-list > ul > li > span {
+	margin-top: 4px;
+    font-weight: normal;
+    color: black;
+    width: 10px;
+    padding: 4px 5px 4px 10px;
+    background: white;
+    float: right;
+	display: none;
+	cursor: pointer;
+}
+
+.users-list > ul > .inp > span {
+	margin-top: 4px;
+    font-weight: normal;
+    color: black;
+    width: 10px;
+    padding: 2px 5px 3px 6px;
+    background: white;
+	cursor: pointer;
+}
+
+.users-list > ul > li:hover > span {
+	display: inline-block;
+}
+
+.users-list > ul > .title:hover > span  {
+	display: inline-block;
+}
+
+.users-list > ul {
+	margin: 0;
+}
+
+.users-list > ul > .title > span {
+	margin-top: 14px;
+    font-size: 75% !Important;
+    font-weight: normal;
+    color: black;
+    width: 10px;
+    content: "+";
+    padding: 6px 6px 5px 9px;
+    background: white;
+    float: right;
+	display: none;
+	cursor: pointer;
+}
+
+.users-list > ul > li > a, .users-list > ul > .title > p {
+    width: calc(100% - 45px);
+	display: inline-block;
+}
+
+div#apps {
+    display: flex;
+    width: 800px;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+li.sortable-chosen.sortable-ghost > a {
+    background-color: white;
+    color: #2A313B !important;
+}
+
+
+.title > p {
+    width: 160px;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem !important;
+}
+.app {
+    cursor: pointer;
+    text-align: center;
+    margin: 16px;
+}
+
+.app > .image {
+    width: 64px;
+    padding: 8px;
+}
+
+html, body {
+  font-family: Roboto !important;
+  font-size: 16px !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #2A313B;
+  color: #b5b5a4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.favorites {
+  display: flex;
+  flex-direction: row;
+}
+
+.favorites-list {
+  width: 10rem;
+  margin: 0.5rem 2em 2em 2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #b5b5a4;
+}
+
+ul > li > a {
+  color: #b5b5a4;
+  outline: none;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+ul > li > a:hover {
+  color: #2A313B;
+  background-color: #b5b5a4;
+}
+
+.search.active {
+	width: 30rem;
+	padding: 0.5rem;
+	border: 1px solid #b5b5a4;
+}
+
+#search-box {
+	font-size: inherit;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0);
+	color: #b5b5a4;
+	border: none;
+}
+
+#search-box:focus {
+	outline: none;
+}
+
+
+/* webkit compat */
+
+.container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}
+
+.favorites {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}

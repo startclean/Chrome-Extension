@@ -1,0 +1,20 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "start.html"
+   },
+   "content_security_policy": "script-src 'self' https://en.wikipedia.org https://api.duckduckgo.com; object-src 'self'",
+   "description": "Open a new tab with a clean & fast ui.",
+   "icons": {
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjvFpWgHdBnk8SWiyKyTzXxpX0RgDGQ7Z8tc2wRBfPxLNAXBk5ySkECb5zv3aHRmlEcnVHk0iHG6vLVfTX5g8bFWiNV561Xa4ieR04Cs8e8efrPKDJWyy8q74bWe1PXc1mCzswOFh08V9k8NNNJWAppgPryHHHAgl2YO2MEZTliwmGKbXy6i/oaN6lHBHk4IRWx+g3VOH1UaDnZPQK5xuIn/tYRXCeioIkBBWHtGKJcJU//sREH5olSWXkACgBuoBZArcpT2DHcKfOAFDSUhdedAPcpDarFOZvJT8fE5Fad+a9yLJudwAQrPlt0oup1MVWPKP6OSLdPl7bQcoQWw8LQIDAQAB",
+   "manifest_version": 2,
+   "name": "Start Clean New Tab Page",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "management", "storage", "topSites" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.8"
+}
