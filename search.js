@@ -86,6 +86,13 @@ var searchCallback = function(list) {
 			script.outerHTML = "";
 			script.delete;
 		}
+
+		if (val.length == 0) {
+			document.getElementById("callback").style.visibility = "hidden";
+		}
+		else {
+			document.getElementById("callback").style.visibility = "visible";
+		}
 	}
 
 	if (list["search"] == "duckduckgo") {
