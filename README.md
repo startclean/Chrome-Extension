@@ -6,7 +6,7 @@
  * Version 0.2.4 changes the way search works with autocomplete powered by duckduckgo and wikipedia. 
  * Version 0.2.2 offers an option to choose search box location and search engine & urls in the search box resolve. 
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rawas)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/raws)
 
 ![](http://i.imgur.com/PnM9k1S.png)
 
