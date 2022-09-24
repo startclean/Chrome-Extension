@@ -119,5 +119,5 @@ var searchCallback = function(list) {
 
 function asUrl(str) {
 	// If the url is valid (with or without http/s), add http:// if missing and return - otherwise return null
-	return (/^(?:(http|https):\/\/)?(?:[\w-]+\.)+[a-z]{2,24}(\/[\w-]*)*$/i.test(str)) ? addhttp(str) : null;
+	return (/^(?:(http|https):\/\/)?(?:[\w-]+\.)+[a-z]{2,24}(\/[\w-]*)*(\.[\w-]+)?$/i.test(str)) ? addhttp(str) : null;
 }
