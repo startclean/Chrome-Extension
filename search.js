@@ -108,11 +108,16 @@ var searchCallback = function(list) {
 		var value = searchbox.value;
 		e.preventDefault();
 		var value = searchbox.value;
-		if (value.indexOf(".") >= 0) {
-			window.location = addhttp(value);;
+		var url = asUrl(value);
+		if (url != null) {
+			window.location = url;
 		} else {
 			form.submit();
 		}
 	}, false);
 }
 
+function asUrl(str) {
+	// If the url is valid (with or without http/s), add http:// if missing and return - otherwise return null
+	return (/^(?:(http|https):\/\/)?(?:[\w-]+\.)+[a-z]{2,24}(\/[\w-]*)*$/i.test(str)) ? addhttp(str) : null;
+}
